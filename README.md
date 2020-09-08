@@ -79,7 +79,7 @@ La classe `CalculateurPointsFonction` fournit un constructeur de signature :
 qui, à partir des paramètres qui lui sont communiqués, calcule la liste de 1001 objets `Basic2DPoint` successifs de la courbe de la fonction `f` dans l'intervalle [ `xMin` ; `xMax` ].
 En d'autres termes, les points sont ordonnés sur les abscisses, qui vont de `xMin` (abscisse du premier point) à `xMax` (abscisse du dernier point), et chaque point `p` de la liste est tel que `p.getY()` contient `f.valeur(p.getX())`. 
 
-Cette liste de points est enregistrée dans un `ArrayList` que l'on peut récupère avec la méthode publique `getListePoints()`. 
+Cette liste de points est enregistrée dans un `ArrayList` que l'on récupère avec la méthode publique `getListePoints()`. 
 En outre, le constructeur calcule les valeurs min et max de la fonction sur l'ensemble de ces points, qui sont accessibles par les méthodes `getYMin()` et `getYMax()`.
 
 ### Travail à réaliser
@@ -116,7 +116,7 @@ Pour ceux-là, il n'y a aucun impératif, ni besoin d'ajouter de ligne dans cett
 Nous vous conseillons de :
 - réfléchir dans un premier temps à ce à quoi vous voulez que votre interface ressemble.
 - ne pas viser trop complexe dans un premier temps étant donné le temps limité tout se réservant la possibilité de l'enrichir.
-- ne pas rester pas bloqué longtemps sur un composant qui ne fonctionnerait pas complètement de façon optimale.
+- ne pas rester bloqué longtemps sur un composant qui ne fonctionnerait pas complètement de façon optimale.
 - travailler les différents éléments de façon indépendante.
 
 ##### Description de l'interface
@@ -124,7 +124,7 @@ Nous vous conseillons de :
 Pour l'IHM dont il est question dans cette partie, **vous ne devez absolument pas utiliser FXML**.
 Vous devrez utiliser la plupart des composants que nous avons vus en TP.
 
-La fenêtre de votre interface doit avoir comme titre "Traceur de fonction", une largeur de 600px et une hauteur de 650px. 
+La fenêtre de votre interface doit avoir comme titre "Traceur de fonction", une largeur de 600 px et une hauteur de 650 px. 
 Dans un premier temps, cette fenêtre ne doit pas être redimensionnable.
 
 L'utilisateur de l'IHM commencera par saisir l'expression à analyser.
@@ -134,7 +134,8 @@ Vous proposerez par défaut l'expression "exp(-x * 0.2) * sin(x)".
 Auquel cas, l'interface doit afficher le résultat de l'analyse, précédé de la chaîne "Expression analysée : f(x) = ".
 
 Ainsi, pour l'exemple de "exp(-x * 0.2) * sin(x)", l'interface doit faire apparaître "Expression analysée : f(x) = (exp(0.0 - ((x) * (0.2)))) * (sin(x))".
-Dans le cas où l'analyse échoue, l'interface doit faire apparaître l'échec. Ainsi, l'analyse de "si(x)" correspondra à "si : identificateur inconnu".
+Dans le cas où l'analyse échoue, l'interface doit faire apparaître l'échec.
+Par exemple, l'analyse de "si(x)" correspondra à "si : identificateur inconnu".
 
 Par ailleurs l'utilisateur peut demander à tracer la fonction et le résultat du tracé apparaîtra dans la zone prévue à cet effet.
 Non seulement vous aurez à tracer la courbe, mais aussi les deux axes d'un plan cartésien ainsi qu'un quadrillage de fond.
@@ -146,8 +147,8 @@ Avant de demander à tracer, l'utilisateur aura la possibilité :
 
 - de définir les espacements entre les lignes du quadrillage, aussi bien en abscisse qu'en ordonnée ; 
 vous proposerez au minimum 2 façons différentes de régler ces valeurs, et, quel que soit le moyen choisi par l'utilisateur, toutes les valeurs sur l'interface doivent être correctement actualisées.
-On admet que l'espacement entre 2 lignes verticales (en X) du quadrillage doit être réglable entre 0.5 et 2, et soit par défaut 0.5.
-De même, l'espacement entre 2 lignes horizontales (en Y) du quadrillage doit être réglable entre 0.25 et 2, et soit par défaut 0.25.
+On admet que l'espacement entre 2 lignes verticales (en X) du quadrillage doit être réglable entre 0.5 et 2, avec 0.5 comme valeur par défaut.
+De même, l'espacement entre 2 lignes horizontales (en Y) du quadrillage doit être réglable entre 0.25 et 2, avec 0.25 comme valeur par défaut.
 Ces valeurs par défaut correspondent au quadrillage apparaissant dans l'exemple donné en début de sujet.
 
 
